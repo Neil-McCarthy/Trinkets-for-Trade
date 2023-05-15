@@ -1,20 +1,23 @@
 BACKEND>>>
 
--add logger and errorhandling middleware
-
--add logger logic to server.js
-
 -run commands
-    npm i date-fns
-    npm i uuid
-    npm i cookie-parser
-    npm i cors
+    npm i dotenv
+    npm i mongoose
+    npm i mongoose-sequence
 
--add cors and cookie-parser to server.js
+-add .env file and add to gitignore
 
--add config folder
--add corsOptions.js
--add allowedOrigins.js
-    set permissions for access to backend
+-add dbConn.js file to config
+    add logic for mongoose db connection
+
+-add models folder and User schema
+
+-change server.js connection type to go through mongodb
+
+-created db on mongodb in backround
+
+-added db info as env
+
+-server is connected to db
 
 <<<BACKEND

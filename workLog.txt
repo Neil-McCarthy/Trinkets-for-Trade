@@ -1,18 +1,20 @@
 BACKEND>>>
 
--create server.js
+-add logger and errorhandling middleware
 
--add server logic to host locally
+-add logger logic to server.js
 
--add paths to public folder
+-run commands
+    npm i date-fns
+    npm i uuid
+    npm i cookie-parser
+    npm i cors
 
--create routing
+-add cors and cookie-parser to server.js
 
--create views folder with basic html
-    connect css to html
-
--create 404 html page
-
--create error handling logic in server.js
+-add config folder
+-add corsOptions.js
+-add allowedOrigins.js
+    set permissions for access to backend
 
 <<<BACKEND

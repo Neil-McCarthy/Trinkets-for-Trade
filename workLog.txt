@@ -1,23 +1,21 @@
 BACKEND>>>
 
 -run commands
-    npm i dotenv
-    npm i mongoose
-    npm i mongoose-sequence
+    npm i express-async-handler
+    npm i bcrypt
 
--add .env file and add to gitignore
+-create controllers folder
 
--add dbConn.js file to config
-    add logic for mongoose db connection
+-create userController
+    get all users
+    create new user 
+    update user 
+    delete user 
 
--add models folder and User schema
+-create routing for userController
 
--change server.js connection type to go through mongodb
+-add user routes to server
 
--created db on mongodb in backround
-
--added db info as env
-
--server is connected to db
+-all controllers tested via postman and all working with db
 
 <<<BACKEND

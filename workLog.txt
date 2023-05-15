@@ -1,21 +1,5 @@
-BACKEND>>>
+FRONTEND>>>
 
--run commands
-    npm i express-async-handler
-    npm i bcrypt
+-General clean up of unnecessary files
 
--create controllers folder
-
--create userController
-    get all users
-    create new user 
-    update user 
-    delete user 
-
--create routing for userController
-
--add user routes to server
-
--all controllers tested via postman and all working with db
-
-<<<BACKEND
+<<<FRONTEND

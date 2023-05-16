@@ -1,13 +1,26 @@
 FRONTEND>>>
 
 -run commands
-    npm i react-router-dom
+    npm i @reduxjs/toolkit react-redux
 
--use routing in index.js to allow for nested routing
+-install redux
 
--created Layout component (parent component)
+-create app and api folders
 
--create basic header/template login/basic public components
-    connected all through Routes via App.js
+-create apiSlice and store for redux
+
+-add redux to index
+
+-add features folder
+
+-rearrange auth folder
+
+-create usersList.js and add to app.js
+
+-add userApiSlice file 
+
+-add userList structure
+
+-connected front end to backend through redux
 
 <<<FRONTEND

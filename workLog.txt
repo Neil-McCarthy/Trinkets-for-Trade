@@ -1,26 +1,7 @@
 FRONTEND>>>
 
--run commands
-    npm i @reduxjs/toolkit react-redux
+-fixing user email upload to db
 
--install redux
-
--create app and api folders
-
--create apiSlice and store for redux
-
--add redux to index
-
--add features folder
-
--rearrange auth folder
-
--create usersList.js and add to app.js
-
--add userApiSlice file 
-
--add userList structure
-
--connected front end to backend through redux
+-toying with data to understand it better
 
 <<<FRONTEND

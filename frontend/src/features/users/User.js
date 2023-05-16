@@ -9,11 +9,11 @@ const User = ({userId}) => {
     const navigate = useNavigate()
 
     if (user) {
-        const handleEdit = () => navigate(`/dash/users/${userId}`)
+        const handleEdit = () => navigate(`/users/${userId}`)
 
         return (
             <tr>
-                <td>{user.username}</td>
+                <td>{user.email}</td>
                 <td>
                     <button onClick={handleEdit}>
                         Button

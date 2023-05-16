@@ -1,5 +1,13 @@
 FRONTEND>>>
 
--basic structure and style for nav
+-run commands
+    npm i react-router-dom
+
+-use routing in index.js to allow for nested routing
+
+-created Layout component (parent component)
+
+-create basic header/template login/basic public components
+    connected all through Routes via App.js
 
 <<<FRONTEND

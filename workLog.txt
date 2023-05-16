@@ -1,5 +1,5 @@
 FRONTEND>>>
 
--General clean up of unnecessary files
+-basic structure and style for nav
 
 <<<FRONTEND

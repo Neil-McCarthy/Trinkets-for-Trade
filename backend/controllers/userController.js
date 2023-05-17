@@ -16,7 +16,8 @@ const getAllUsers = asyncHandler(async (req, res) => {
 
 // ADD EMAIL AND EMAIL VERIFY
 const createNewUser = asyncHandler(async (req, res) => {
-    const {username, email, password} = req.body;
+    const {username, password} = req.body;
+    const email = 'testemail';
 
     //confirm data
     if (!username || !email || !password) {

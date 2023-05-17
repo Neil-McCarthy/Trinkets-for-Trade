@@ -1,9 +1,13 @@
+BACKEND>>>
+
+-add temp hard email value to new user controller
+
+<<<BACKEND
+
 FRONTEND>>>
 
--adding other user endpoints to usersApiSlice and exporting
+-add logic to NewUserForm
 
--create NewUserForm and EditUser templates
-
--add routing to app.js for new user endpoints
+-add new user to db through front end tested and confirmed
 
 <<<FRONTEND

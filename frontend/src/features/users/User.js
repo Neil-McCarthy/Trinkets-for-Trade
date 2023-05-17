@@ -16,7 +16,7 @@ const User = ({userId}) => {
                 <td>{user.email}</td>
                 <td>
                     <button onClick={handleEdit}>
-                        Button
+                        Edit user
                     </button>
                 </td>
             </tr>

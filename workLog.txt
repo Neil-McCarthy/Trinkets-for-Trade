@@ -1,13 +1,11 @@
 BACKEND>>>
 
--add temp hard email value to new user controller
+-
 
 <<<BACKEND
 
 FRONTEND>>>
 
--add logic to NewUserForm
-
--add new user to db through front end tested and confirmed
+-create editUser and editUserForm layout and logic
 
 <<<FRONTEND

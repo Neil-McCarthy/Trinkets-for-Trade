@@ -13,7 +13,7 @@ const User = ({userId}) => {
 
         return (
             <tr>
-                <td>{user.email}</td>
+                <td>{user.username}</td>
                 <td>
                     <button onClick={handleEdit}>
                         Edit user

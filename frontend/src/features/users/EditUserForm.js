@@ -40,7 +40,7 @@ const EditUserForm = ({ user }) => {
         if (isSuccess || isDelSuccess) {
             setUsername('')
             setPassword('')
-            navigate('/users')
+            navigate('/users/usersList')
         }
 
     }, [isSuccess, isDelSuccess, navigate])

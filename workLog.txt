@@ -1,7 +1,9 @@
 FRONTEND>>>
 
--fixing user email upload to db
+-adding other user endpoints to usersApiSlice and exporting
 
--toying with data to understand it better
+-create NewUserForm and EditUser templates
+
+-add routing to app.js for new user endpoints
 
 <<<FRONTEND

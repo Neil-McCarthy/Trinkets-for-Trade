@@ -1,15 +1,37 @@
 BACKEND>>>
 
--
+-add routing for authRoutes in server.js
+
+-create authRoutes.js
+
+-run commands
+    npm i express-rate-limit
+    npm i jsonwebtoken
+
+    *** acquire ATS for env ***
+    node (ENTER)
+    require('crypto').randomBytes(64).toString('hex') (ENTER)
+
+    *** acquire RTS for env ***
+    (AFTER ABOVE INSTRUCTIONS PRESS UP ARROW AND ENTER)
+
+
+
+-create log limiter in middleware
+
+-import loginlimiter to authRoutes
+
+-create authController
+-add logic for login/refresh/logout in authController
+
+-create verifyJWT middleware
+
+-Authorisation for login/refresh/logout tested through postman and all working
 
 <<<BACKEND
 
 FRONTEND>>>
 
--import and enable setupListeners in app/store.js
-
--add stipulations to useGetUsersQuery so that fresh data will be gotten every minute
-
--link to newUser form and list of all users (temp) through nav
+-
 
 <<<FRONTEND

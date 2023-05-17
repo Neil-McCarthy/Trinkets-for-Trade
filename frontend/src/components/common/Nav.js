@@ -6,8 +6,9 @@ const Nav = () => {
             <ul>
                 <Link to='/'>Home</Link>
                 <Link to='/'>Trinkets</Link>
-                <Link to='/'>Sign Up</Link>
+                <Link to='/users/newUser'>Sign Up</Link>
                 <Link to='/login'>Login</Link>
+                <Link to='/users/usersList'>All users</Link>
             </ul>
         </nav>
     )

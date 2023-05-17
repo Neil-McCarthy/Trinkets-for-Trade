@@ -6,15 +6,10 @@ BACKEND>>>
 
 FRONTEND>>>
 
--remove data time limit of 5s from usersApiSlice
+-import and enable setupListeners in app/store.js
 
--create Prefetch.js
--add logic to initiate a subscription in order to keep data
--add logic to unsubscribe once no longer using saved data
+-add stipulations to useGetUsersQuery so that fresh data will be gotten every minute
 
--add routing to App.js for Prefecth.js
--Route is the parent of protected pages ie. pages that require/access user personal information
-
--edit user through front end is tested and working
+-link to newUser form and list of all users (temp) through nav
 
 <<<FRONTEND

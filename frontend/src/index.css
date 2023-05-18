@@ -28,12 +28,16 @@ nav ul {
   list-style: none;
   height: 100%;
 }
-nav a {
+nav a, nav button {
   padding: 1em;
   font-size: 110%;
   color: black;
 }
-nav a:hover {
+nav button {
+  background: none;
+  border: 0;
+}
+nav a:hover, nav button:hover {
   transition: .5s;
   background-color: azure;
 }

@@ -1,15 +1,19 @@
 BACKEND>>>
 
--
+-correct authToken timeouts
 
 <<<BACKEND
 
 FRONTEND>>>
 
--add baseQuery to apiSlice
+-create hooks folder and usePersist.js file
 
--add logic to baseQuery to use authTokens through frontend
+-add persist checkbox in Login.js
 
--add baseQueryWithReauth to appSlice
+-add PersistLogin component and add logic
+
+-add persistLogin to app.js
+
+-stay logged in through front end with usePersist and authToken tested and confirmed
 
 <<<FRONTEND

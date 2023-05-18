@@ -6,15 +6,10 @@ BACKEND>>>
 
 FRONTEND>>>
 
--create features/auth/authSlice.js
+-add baseQuery to apiSlice
 
--add authReducer to store.js
+-add logic to baseQuery to use authTokens through frontend
 
--create authApiSlice
-
--add logic to Login.js that goes through authApiSlice
-
--tested authTokens through postman 
--tokens working but not through front end
+-add baseQueryWithReauth to appSlice
 
 <<<FRONTEND

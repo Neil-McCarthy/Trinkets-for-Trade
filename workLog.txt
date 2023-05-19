@@ -1,19 +1,29 @@
 BACKEND>>>
 
--correct authToken timeouts
+-add trinkets routes to server.js
+
+-create trinkets routes and trinkets controller files
+
+-add logic to trinkets routes file
+
+-create trinket model
+
+-create trinketController logic for get all trinkets
 
 <<<BACKEND
 
 FRONTEND>>>
 
--create hooks folder and usePersist.js file
+-run commands
+    npm i jwt-decode
 
--add persist checkbox in Login.js
+-create features/trinkets
 
--add PersistLogin component and add logic
+-create trinketsList component basic template
 
--add persistLogin to app.js
+-add routing to trinkets routes
+    only to trinketsList for now
 
--stay logged in through front end with usePersist and authToken tested and confirmed
+-STILL NEED TO ADD API CONTENT FOR TRINKETS TO ACCESS BACKEND
 
 <<<FRONTEND

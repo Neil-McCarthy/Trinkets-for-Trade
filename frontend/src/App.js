@@ -8,6 +8,7 @@ import EditUser from './features/users/EditUser';
 import NewUserForm from './features/users/NewUserForm';
 import Prefetch from './features/auth/Prefetch';
 import PersistLogin from './features/auth/PersistLogin';
+import TrinketsList from './features/trinkets/TrinketsList';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
               <Route path='usersList' element={<UsersList />} />
               <Route path=':id' element={<EditUser />} />
               <Route path='newUser' element={<NewUserForm />} />
+            </Route>
+            <Route path='trinkets'>
+              <Route path='trinketsList' element={<TrinketsList />} />
             </Route>
           </Route>
         </Route>

@@ -1,29 +1,13 @@
 BACKEND>>>
 
--add trinkets routes to server.js
-
--create trinkets routes and trinkets controller files
-
--add logic to trinkets routes file
-
--create trinket model
-
--create trinketController logic for get all trinkets
+-
 
 <<<BACKEND
 
 FRONTEND>>>
 
--run commands
-    npm i jwt-decode
+-add nav and header to front-end components
 
--create features/trinkets
-
--create trinketsList component basic template
-
--add routing to trinkets routes
-    only to trinketsList for now
-
--STILL NEED TO ADD API CONTENT FOR TRINKETS TO ACCESS BACKEND
+-will update to respond to loign cookie when site is live
 
 <<<FRONTEND

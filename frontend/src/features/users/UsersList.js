@@ -1,5 +1,7 @@
 import { useGetUsersQuery } from "./usersApiSlice";
 import User from './User';
+import Header from "../../components/common/Header";
+import Nav from "../../components/common/Nav";
 
 const UsersList = () => {
 
@@ -46,7 +48,13 @@ const UsersList = () => {
         )
     }
 
-    return content
+    return (
+        <>
+            <Header />
+            <Nav  isLoggedIn={true} />
+            {content}
+        </>
+    )
 }
 
 export default UsersList;

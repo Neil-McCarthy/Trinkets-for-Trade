@@ -6,8 +6,8 @@ import Nav from './common/Nav';
 const Public = () => {
     return (
         <React.Fragment>
-            <Nav />
             <Header />
+            <Nav isLoggedIn={false} />
             <main>
                 <h1>
                     this is the main

@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react"
 import { useAddNewUserMutation } from "./usersApiSlice"
 import { useNavigate } from "react-router-dom"
+import Header from "../../components/common/Header"
+import Nav from "../../components/common/Nav"
 
 const USER_REGEX = /^[A-z]{3,20}$/
 const PWD_REGEX = /^[A-z0-9!@#$%]{4,12}$/
@@ -88,6 +90,12 @@ const NewUserForm = () => {
         </>
     )
 
-    return content
+    return (
+        <>
+            <Header />
+            <Nav isLoggedIn={false} />
+            {content}
+        </>
+    )
 }
 export default NewUserForm

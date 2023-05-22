@@ -6,6 +6,7 @@ import { setCredentials } from './authSlice'
 import { useLoginMutation } from './authApiSlice'
 
 import usePersist from '../../hooks/usePersist'
+import Nav from '../../components/common/Nav'
 
 
 const Login = () => {
@@ -64,6 +65,7 @@ const Login = () => {
             <header>
                 <h1>Employee Login</h1>
             </header>
+            <Nav  isLoggedIn={false} />
             <main>
                 <p ref={errRef} aria-live="assertive">{errMsg}</p>
 

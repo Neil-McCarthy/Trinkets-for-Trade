@@ -6,8 +6,12 @@ BACKEND>>>
 
 FRONTEND>>>
 
--add nav and header to front-end components
+-create trinketsApiSlice
 
--will update to respond to loign cookie when site is live
+-add content to trinketList component
+
+-add content to Trinket component
+
+-connect frontend to backend trinket logic tested and working
 
 <<<FRONTEND

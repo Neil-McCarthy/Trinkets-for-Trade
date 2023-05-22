@@ -12,11 +12,7 @@ const TrinketsList = () => {
         isSuccess,
         isError,
         error
-    } = useGetTrinketsQuery('trinketsList', {
-        pollingInterval: 60000,
-        refetchOnFocus: true,
-        refetchOnMountOrArgChange: true
-    })
+    } = useGetTrinketsQuery()
 
     let content
 
@@ -29,6 +25,7 @@ const TrinketsList = () => {
     if (isSuccess) {
 
         const { ids } = trinkets
+        // console.log(ids)
 
         const tableContent = ids?.length
             ? ids.map(trinketId => <Trinket key={trinketId} trinketId={trinketId} />)
@@ -38,7 +35,7 @@ const TrinketsList = () => {
             <table>
                 <thead>
                     <tr>
-                        <th>Trinketname</th>
+                        <th>Trinket name</th>
                         <th>Edit</th>
                     </tr>
                 </thead>

@@ -1,7 +1,9 @@
 import { createSelector, createEntityAdapter } from "@reduxjs/toolkit";
 import { apiSlice } from "../../app/api/apiSlice"
 
-const trinketsAdapter = createEntityAdapter({})
+const trinketsAdapter = createEntityAdapter({
+    sortComparer: (a, b) => (a.completed === b.completed) ? 0 : a.completed ? 1 : -1
+})
 
 const initialState = trinketsAdapter.getInitialState()
 
@@ -15,17 +17,19 @@ export const trinketsApiSlice = apiSlice.injectEndpoints({
             transformResponse: responseData => {
                 const loadedTrinkets = responseData.map(trinket => {
                     trinket.id = trinket._id
+                    console.log(trinket)
                     return trinket
                 });
                 return trinketsAdapter.setAll(initialState, loadedTrinkets)
             },
             providesTags: (result, error, arg) => {
                 if (result?.ids) {
+                    console.log(result)
                     return [
-                        { type: 'trinket', id: 'LIST' },
-                        ...result.ids.map(id => ({ type: 'trinket', id }))
+                        { type: 'Trinket', id: 'LIST' },
+                        ...result.ids.map(id => ({ type: 'Trinket', id }))
                     ]
-                } else return [{ type: 'trinket', id: 'LIST' }]
+                } else return [{ type: 'Trinket', id: 'LIST' }]
             }
         }),
         addNewTrinket: builder.mutation({

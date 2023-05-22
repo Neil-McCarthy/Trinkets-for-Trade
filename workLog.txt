@@ -1,17 +1,17 @@
 BACKEND>>>
 
--
+-added create trinket route
+
+-added logic for create trinket in controller
 
 <<<BACKEND
 
 FRONTEND>>>
 
--create trinketsApiSlice
+-remove from getTrinketQuery which was stopping db access on front
 
--add content to trinketList component
+-corrected trinket component
 
--add content to Trinket component
-
--connect frontend to backend trinket logic tested and working
+-
 
 <<<FRONTEND

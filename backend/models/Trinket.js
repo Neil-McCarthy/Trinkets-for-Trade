@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 const trinketSchema = new mongoose.Schema({
-    userID: {
+    user: {
         type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User'

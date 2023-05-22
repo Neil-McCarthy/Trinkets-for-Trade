@@ -28,6 +28,7 @@ const UsersList = () => {
     if (isSuccess) {
 
         const { ids } = users
+        // console.log(ids)
 
         const tableContent = ids?.length
             ? ids.map(userId => <User key={userId} userId={userId} />)

@@ -1,12 +1,12 @@
 // import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-import { selectTrinketById } from "./trinketsApiSlice";
+import { selectAllTrinkets, selectTrinketById } from "./trinketsApiSlice";
 
-const Trinket = (trinketId) => {
+const Trinket = ({trinketId}) => {
     const trinket = useSelector(state => selectTrinketById(state, trinketId))
-
+    console.log(trinketId, trinket)
     // const navigate = useNavigate()
-
+    
     if (trinket) {
         // const created = new Date(trinket.createdAt).toLocaleString('en-US', { day: 'numeric', month: 'long' })
 
@@ -15,12 +15,14 @@ const Trinket = (trinketId) => {
         // const handleEdit = () => navigate(`/trinkets/${trinketId}`)
 
         return (
-            <section>
-                <h1>
-                    trinket.name
-                    trinket.description
-                </h1>
-            </section>
+            <tr>
+                <td>
+                    {trinket.name}
+                </td>
+                <td>
+                    {trinket.description}
+                </td>
+            </tr>
         )
 
     } else return null

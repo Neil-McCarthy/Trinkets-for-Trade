@@ -9,6 +9,6 @@ router.route('/')
     .get(trinketsController.getAllTrinkets)
     .post(trinketsController.createNewTrinket)
     .patch(trinketsController.updateTrinket)
-    // .delete(trinketsController.deleteTrinket)
+    .delete(trinketsController.deleteTrinket)
 
 module.exports = router;

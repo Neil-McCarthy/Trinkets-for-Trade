@@ -82,11 +82,34 @@ const updateTrinket = asyncHandler(async (req, res) => {
 })
 
 
+const deleteTrinket = asyncHandler(async (req, res) => {
+    const { id } = req.body
+
+    // Confirm data
+    if (!id) {
+        return res.status(400).json({ message: 'Trinket ID required' })
+    }
+
+    // Confirm trinket exists to delete 
+    const trinket = await Trinket.findById(id).exec()
+
+    if (!trinket) {
+        return res.status(400).json({ message: 'Trinket not found' })
+    }
+
+    const result = await trinket.deleteOne()
+
+    const reply = `Trinket '${result.name}' with ID ${result._id} deleted`
+
+    res.json(reply)
+})
+
+
 
 
 module.exports = {
     getAllTrinkets,
     createNewTrinket,
     updateTrinket,
-    // deleteUser
+    deleteTrinket
 }

@@ -1,19 +1,15 @@
 BACKEND>>>
 
--
+-add delete trinket controller
+
+-add delete trinket route
+
+-tested through postman - backend working for delete trinket
 
 <<<BACKEND
 
 FRONTEND>>>
 
--correcting routes for index components
-
--add editTrinketForm component
-
--make edit handler function in trinkets.js
-
--frontend edit trinket working
-
--fix nav routes
+-
 
 <<<FRONTEND

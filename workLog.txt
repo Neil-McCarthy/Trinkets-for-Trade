@@ -6,8 +6,6 @@ BACKEND>>>
 
 FRONTEND>>>
 
--add logic to EditTrinketForm component to delete trinket
-
--delete trinket through front end tested and confirmed
+-add new trinket and new trinket form components
 
 <<<FRONTEND

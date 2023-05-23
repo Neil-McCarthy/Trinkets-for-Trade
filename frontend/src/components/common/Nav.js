@@ -44,7 +44,8 @@ const Nav = (props) => {
                 {isLoggedIn && (
                     <Link onClick={sendLogout} to='/'>Logout</Link>
                 )}
-                <Link to='/users/usersList'>All users</Link>
+                <Link to='/users/'>Users</Link>
+                <Link to='/trinkets/'>Trinkets</Link>
             </ul>
         </nav>
     )

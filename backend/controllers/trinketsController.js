@@ -4,15 +4,15 @@ const asyncHandler = require('express-async-handler')
 
 
 const getAllTrinkets = asyncHandler(async (req, res) => {
-    // Get all notes from MongoDB
+    // Get all trinkets from MongoDB
     const trinkets = await Trinket.find().lean()
     // console.log(trinkets)
-    // If no notes 
+    // If no trinkets 
     if (!trinkets?.length) {
         return res.status(400).json({ message: 'No trinkets found!?' })
     }
 
-    // Add username to each note before sending the response 
+    // Add username to each trinket before sending the response 
     // See Promise.all with map() here: https://youtu.be/4lqJBBEpjRE 
     // You could also do this with a for...of loop
 
@@ -38,10 +38,10 @@ const createNewTrinket = asyncHandler(async (req, res) => {
     const imageUrl = "../images/duck.jpg"
 
     // Check for duplicate title
-    // const duplicate = await Note.findOne({ title }).lean().exec()
+    // const duplicate = await Trinket.findOne({ title }).lean().exec()
 
     // if (duplicate) {
-    //     return res.status(409).json({ message: 'Duplicate note title' })
+    //     return res.status(409).json({ message: 'Duplicate trinket title' })
     // }
 
     // Create and store the new user 
@@ -56,11 +56,37 @@ const createNewTrinket = asyncHandler(async (req, res) => {
 })
 
 
+const updateTrinket = asyncHandler(async (req, res) => {
+    const { id, name, description, price, imageUrl } = req.body
+
+    // Confirm data
+    if (!id || !name || !description || !price || !imageUrl) {
+        return res.status(400).json({ message: 'All fields are required' })
+    }
+
+    // Confirm trinket exists to update
+    const trinket = await Trinket.findById(id).exec()
+
+    if (!trinket) {
+        return res.status(400).json({ message: 'Trinket not found' })
+    }
+
+    trinket.name = name
+    trinket.description = description
+    trinket.price = price
+    trinket.imageUrl = imageUrl
+
+    const updatedTrinket = await trinket.save()
+
+    res.json(`'${updatedTrinket.description}' updated`)
+})
+
+
 
 
 module.exports = {
     getAllTrinkets,
     createNewTrinket,
-    // updateUser,
+    updateTrinket,
     // deleteUser
 }

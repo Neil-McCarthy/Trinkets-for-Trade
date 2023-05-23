@@ -1,16 +1,14 @@
 BACKEND>>>
 
--added create trinket route
+-add update trinket controller logic
 
--added logic for create trinket in controller
+-add routing for update trinket
+
+-tested through postman and working
 
 <<<BACKEND
 
 FRONTEND>>>
-
--remove from getTrinketQuery which was stopping db access on front
-
--corrected trinket component
 
 -
 

@@ -8,7 +8,7 @@ router.use(verifyJWT);
 router.route('/')
     .get(trinketsController.getAllTrinkets)
     .post(trinketsController.createNewTrinket)
-    // .patch(trinketsController.updateTrinket)
+    .patch(trinketsController.updateTrinket)
     // .delete(trinketsController.deleteTrinket)
 
 module.exports = router;

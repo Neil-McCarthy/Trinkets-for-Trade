@@ -1,15 +1,13 @@
 BACKEND>>>
 
--add delete trinket controller
-
--add delete trinket route
-
--tested through postman - backend working for delete trinket
+-
 
 <<<BACKEND
 
 FRONTEND>>>
 
--
+-add logic to EditTrinketForm component to delete trinket
+
+-delete trinket through front end tested and confirmed
 
 <<<FRONTEND

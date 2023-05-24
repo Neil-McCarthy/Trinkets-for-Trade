@@ -82,7 +82,7 @@ const EditTrinketForm = ({ trinket, users }) => {
                 <input
                     id="trinket-name"
                     name="name"
-                    type="description"
+                    type="text"
                     autoComplete="off"
                     value={name}
                     onChange={onNameChanged}
@@ -101,7 +101,7 @@ const EditTrinketForm = ({ trinket, users }) => {
                 <input
                     id="trinket-price"
                     name="price"
-                    type="description"
+                    type="number"
                     autoComplete="off"
                     value={price}
                     onChange={onPriceChanged}

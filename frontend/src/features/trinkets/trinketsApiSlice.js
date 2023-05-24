@@ -17,14 +17,12 @@ export const trinketsApiSlice = apiSlice.injectEndpoints({
             transformResponse: responseData => {
                 const loadedTrinkets = responseData.map(trinket => {
                     trinket.id = trinket._id
-                    console.log(trinket)
                     return trinket
                 });
                 return trinketsAdapter.setAll(initialState, loadedTrinkets)
             },
             providesTags: (result, error, arg) => {
                 if (result?.ids) {
-                    console.log(result)
                     return [
                         { type: 'Trinket', id: 'LIST' },
                         ...result.ids.map(id => ({ type: 'Trinket', id }))

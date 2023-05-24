@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useAddNewTrinketMutation } from "./trinketsApiSlice"
+import useAuth from "../../hooks/useAuth"
 
-const NewTrinketForm = ({ users }) => {
+const NewTrinketForm = () => {
+
+    const {userId} = useAuth();
 
     const [addNewTrinket, {
         isLoading,
@@ -16,22 +19,20 @@ const NewTrinketForm = ({ users }) => {
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
     const [price, setPrice] = useState(0)
-    const [userId, setUserId] = useState(users[0].id)
 
     useEffect(() => {
         if (isSuccess) {
             setName('')
             setDescription('')
-            setUserId('')
             navigate('/trinkets')
         }
     }, [isSuccess, navigate])
 
     const onNameChanged = e => setName(e.target.value)
     const onDescriptionChanged = e => setDescription(e.target.value)
-    const onUserIdChanged = e => setUserId(e.target.value)
+    const onPriceChanged = e => setPrice(e.target.value)
 
-    const canSave = [name, description, userId].every(Boolean) && !isLoading
+    const canSave = [ name, description, price].every(Boolean) && !isLoading
 
     const onSaveTrinketClicked = async (e) => {
         e.preventDefault()
@@ -76,6 +77,16 @@ const NewTrinketForm = ({ users }) => {
                     name="description"
                     value={description}
                     onChange={onDescriptionChanged}
+                />
+                <label htmlFor="price">
+                    Price:</label>
+                <input
+                    id="name"
+                    name="name"
+                    type="number"
+                    autoComplete="off"
+                    value={price}
+                    onChange={onPriceChanged}
                 />
             </form>
         </>

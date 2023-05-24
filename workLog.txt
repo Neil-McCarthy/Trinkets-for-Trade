@@ -1,11 +1,21 @@
 BACKEND>>>
 
--
+-add user id and status to login/refresh tokens
 
 <<<BACKEND
 
 FRONTEND>>>
 
--general clean up
+-create useAuth.js hook
+
+-decode jwt token to access current users data
+
+-impliment useAuth in new trinket form
+
+-update logic and layout in new trinket form
+
+-add route for newTrinket in app.js
+
+-clean up basics around other components
 
 <<<FRONTEND

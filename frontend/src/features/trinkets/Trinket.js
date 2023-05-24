@@ -5,13 +5,9 @@ import { useNavigate } from 'react-router-dom'
 
 const Trinket = ({trinketId}) => {
     const trinket = useSelector(state => selectTrinketById(state, trinketId))
-    console.log(trinketId, trinket)
     const navigate = useNavigate()
     
     if (trinket) {
-        // const created = new Date(trinket.createdAt).toLocaleString('en-US', { day: 'numeric', month: 'long' })
-
-        // const updated = new Date(trinket.updatedAt).toLocaleString('en-US', { day: 'numeric', month: 'long' })
 
         const handleEdit = () => navigate(`/trinkets/${trinketId}`)
 

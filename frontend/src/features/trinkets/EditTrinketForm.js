@@ -106,10 +106,6 @@ const EditTrinketForm = ({ trinket, users }) => {
                     value={price}
                     onChange={onPriceChanged}
                 />
-                {/* <div>
-                    <p>Created:<br />{created}</p>
-                    <p>Updated:<br />{updated}</p>
-                </div> */}
             </form>
         </>
     )

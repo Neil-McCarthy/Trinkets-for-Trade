@@ -6,6 +6,6 @@ BACKEND>>>
 
 FRONTEND>>>
 
--add new trinket and new trinket form components
+-general clean up
 
 <<<FRONTEND

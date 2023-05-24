@@ -15,6 +15,7 @@ const NewTrinketForm = ({ users }) => {
 
     const [name, setName] = useState('')
     const [description, setDescription] = useState('')
+    const [price, setPrice] = useState(0)
     const [userId, setUserId] = useState(users[0].id)
 
     useEffect(() => {
@@ -22,7 +23,7 @@ const NewTrinketForm = ({ users }) => {
             setName('')
             setDescription('')
             setUserId('')
-            navigate('/dash/trinkets')
+            navigate('/trinkets')
         }
     }, [isSuccess, navigate])
 
@@ -35,44 +36,31 @@ const NewTrinketForm = ({ users }) => {
     const onSaveTrinketClicked = async (e) => {
         e.preventDefault()
         if (canSave) {
-            await addNewTrinket({ user: userId, name, description })
+            await addNewTrinket({ user: userId, name: name, description: description, price: price })
         }
     }
 
-    const options = users.map(user => {
-        return (
-            <option
-                key={user.id}
-                value={user.id}
-            > {user.username}</option >
-        )
-    })
-
-    const errClass = isError ? "errmsg" : "offscreen"
-    const validNameClass = !name ? "form__input--incomplete" : ''
-    const validDescriptionClass = !description ? "form__input--incomplete" : ''
 
     const content = (
         <>
-            <p className={errClass}>{error?.data?.message}</p>
+            <p>{error?.data?.message}</p>
 
-            <form className="form" onSubmit={onSaveTrinketClicked}>
-                <div className="form__name-row">
+            <form onSubmit={onSaveTrinketClicked}>
+                <div>
                     <h2>New Trinket</h2>
-                    <div className="form__action-buttons">
+                    <div>
                         <button
                             className="icon-button"
                             title="Save"
                             disabled={!canSave}
                         >
-                            <FontAwesomeIcon icon={faSave} />
+                            Save
                         </button>
                     </div>
                 </div>
-                <label className="form__label" htmlFor="name">
+                <label htmlFor="name">
                     Name:</label>
                 <input
-                    className={`form__input ${validNameClass}`}
                     id="name"
                     name="name"
                     type="text"
@@ -81,28 +69,14 @@ const NewTrinketForm = ({ users }) => {
                     onChange={onNameChanged}
                 />
 
-                <label className="form__label" htmlFor="description">
+                <label htmlFor="description">
                     Description:</label>
-                <descriptionarea
-                    className={`form__input form__input--description ${validDescriptionClass}`}
+                <textarea
                     id="description"
                     name="description"
                     value={description}
                     onChange={onDescriptionChanged}
                 />
-
-                <label className="form__label form__checkbox-container" htmlFor="username">
-                    ASSIGNED TO:</label>
-                <select
-                    id="username"
-                    name="username"
-                    className="form__select"
-                    value={userId}
-                    onChange={onUserIdChanged}
-                >
-                    {options}
-                </select>
-
             </form>
         </>
     )

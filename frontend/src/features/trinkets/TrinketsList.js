@@ -25,7 +25,6 @@ const TrinketsList = () => {
     if (isSuccess) {
 
         const { ids } = trinkets
-        // console.log(ids)
 
         const tableContent = ids?.length
             ? ids.map(trinketId => <Trinket key={trinketId} trinketId={trinketId} />)

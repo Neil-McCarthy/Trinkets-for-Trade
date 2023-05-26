@@ -43,3 +43,26 @@ nav a:hover, nav button:hover {
 }
 
 /* <<<NAV */
+
+
+/* MAIN>>> */
+
+main {
+  margin: auto;
+  margin: 0 10%;
+  background-color: aquamarine;
+}
+
+/* DISPLAY SECTION>>> */
+
+.display-all-section {
+  margin: auto;
+  margin-top: 2em;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  row-gap: 2em;
+}
+
+/* <<<DISPLAY SECTION */
+
+/* <<<MAIN */

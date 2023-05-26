@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import Header from "../../components/common/Header"
 import Nav from "../../components/common/Nav"
 import Trinket from "./Trinket"
@@ -31,17 +32,20 @@ const TrinketsList = () => {
             : null
 
         content = (
-            <table>
-                <thead>
-                    <tr>
-                        <th>Trinket name</th>
-                        <th>Edit</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {tableContent}
-                </tbody>
-            </table>
+            // <table className="display-all-table">
+            //     <thead>
+            //         <tr>
+            //             <th>Trinket name</th>
+            //             <th>Edit</th>
+            //         </tr>
+            //     </thead>
+            //     <tbody>
+            //         {tableContent}
+            //     </tbody>
+            // </table>
+            <section className="display-all-section">
+                {tableContent}
+            </section>
         )
     }
 
@@ -49,7 +53,12 @@ const TrinketsList = () => {
         <>
             <Header />
             <Nav  isLoggedIn={true} />
-            {content}
+            <main>
+                <h1>
+                    <Link to='/trinkets/newTrinket'>Create new trinket</Link>
+                </h1>
+                {content}
+            </main>
         </>
     )
 }

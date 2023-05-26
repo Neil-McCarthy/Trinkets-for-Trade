@@ -12,22 +12,34 @@ const Trinket = ({trinketId}) => {
         const handleEdit = () => navigate(`/trinkets/${trinketId}`)
 
         return (
-            <tr>
-                <td>
+            // <tr>
+            //     <td>
+            //         {trinket.name}
+            //     </td>
+            //     <td>
+            //         {trinket.description}
+            //     </td>
+            //     <td>
+            //         {trinket.price}
+            //     </td>
+            //     <td>
+            //         <button onClick={handleEdit}>
+            //             Edit
+            //         </button>
+            //     </td>
+            // </tr>
+            <section>
+                <h1>
                     {trinket.name}
-                </td>
-                <td>
+                </h1>
+                <img src={trinket.imageUrl} />
+                <p>
+                    €{trinket.price}
+                </p>
+                <p>
                     {trinket.description}
-                </td>
-                <td>
-                    {trinket.price}
-                </td>
-                <td>
-                    <button onClick={handleEdit}>
-                        Edit
-                    </button>
-                </td>
-            </tr>
+                </p>
+            </section>
         )
 
     } else return null

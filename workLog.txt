@@ -1,11 +1,15 @@
 BACKEND>>>
 
--add collation to user controller
+-
 
 <<<BACKEND
 
 FRONTEND>>>
 
--fix error message spacing
+-reshape trinket list layout
+
+-add trinket list className
+
+-rearrange nav links
 
 <<<FRONTEND

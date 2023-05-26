@@ -34,7 +34,8 @@ const Nav = (props) => {
         <nav>
             <ul>
                 <Link to='/'>Home</Link>
-                <Link to='/'>Trinkets</Link>
+                <Link to='/trinkets/'>Trinkets</Link>
+                <Link to='/users/'>Users</Link>
                 {!isLoggedIn && (
                     <Link to='/users/newUser'>Sign Up</Link>
                 )}
@@ -44,8 +45,6 @@ const Nav = (props) => {
                 {isLoggedIn && (
                     <Link onClick={sendLogout} to='/'>Logout</Link>
                 )}
-                <Link to='/users/'>Users</Link>
-                <Link to='/trinkets/'>Trinkets</Link>
             </ul>
         </nav>
     )

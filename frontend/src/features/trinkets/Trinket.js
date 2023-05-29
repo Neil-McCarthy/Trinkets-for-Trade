@@ -32,7 +32,7 @@ const Trinket = ({trinketId}) => {
                 <h1>
                     {trinket.name}
                 </h1>
-                <img src={trinket.imageUrl} />
+                <img src={require('../../images/duck.jpg')} />
                 <p>
                     €{trinket.price}
                 </p>

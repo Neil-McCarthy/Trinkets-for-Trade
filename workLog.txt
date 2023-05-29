@@ -6,10 +6,16 @@ BACKEND>>>
 
 FRONTEND>>>
 
--add content to public js
+-create footer component
 
--add styles to puclic js
+-add footer in public and trinket list components
 
--update app routes
+-add icon images for footer
+
+-add template image for trinket list (will remove later)
+
+-correct trinket list img src
+
+-add styles for display all sections and for footer
 
 <<<FRONTEND

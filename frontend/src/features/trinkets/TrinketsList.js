@@ -3,6 +3,7 @@ import Header from "../../components/common/Header"
 import Nav from "../../components/common/Nav"
 import Trinket from "./Trinket"
 import { useGetTrinketsQuery } from "./trinketsApiSlice"
+import Footer from "../../components/common/Footer"
 
 
 const TrinketsList = () => {
@@ -32,17 +33,6 @@ const TrinketsList = () => {
             : null
 
         content = (
-            // <table className="display-all-table">
-            //     <thead>
-            //         <tr>
-            //             <th>Trinket name</th>
-            //             <th>Edit</th>
-            //         </tr>
-            //     </thead>
-            //     <tbody>
-            //         {tableContent}
-            //     </tbody>
-            // </table>
             <section className="display-all-section">
                 {tableContent}
             </section>
@@ -59,6 +49,7 @@ const TrinketsList = () => {
                 </h1>
                 {content}
             </main>
+            <Footer />
         </>
     )
 }

@@ -70,7 +70,7 @@ main {
 }
 /* HOME PAGE>>> */
 .home section {
-  margin-top: 4em;
+  margin-top: 8em;
   font-size: 110%;
   border-radius: 1em;
   background-color: aquamarine;
@@ -95,7 +95,57 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   row-gap: 2em;
+
+}
+.display-all-section section {
+  background-color: aquamarine;
+  padding: .3em;
+  border: .4em solid white;
+}
+.display-all-section h1 {
+  text-align: center;
+}
+.display-all-section img {
+  margin-left: 20%;
+  max-width: 60%;
 }
 /* <<<DISPLAY SECTION */
 
 /* <<<MAIN */
+
+
+/* FOOTER>>> */
+
+footer{
+  margin-top: 8em;
+  text-align: center;
+  background-color: cornsilk;
+  min-height: 3.5em;
+  height:auto;
+  display:grid;
+  grid-template-columns:repeat(5, 1fr);
+  padding-top:1.5em;
+}
+footer *{
+  grid-row: 1/2;
+  padding-bottom: .5em;
+}
+footer li{
+  display: inline-block;
+  padding:0;
+  height:100%;
+}
+footer img{
+  width:2em;
+  margin: .3em;
+}
+footer section:nth-child(1){
+  font-family: 'Cinzel', serif;
+  grid-column:2/5;
+  font-size:1.75em;
+}
+footer section:nth-child(3){
+  grid-column: 1/2;
+}
+
+/* <<<FOOTER */

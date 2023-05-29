@@ -19,12 +19,12 @@ app.use(logger);
 
 app.use(express.json());
 
-app.use('/', express.static(path.join(__dirname, 'public')));
+// app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.use(cors(corsOptions));
 app.use(cookieParser());
 
-app.use('/', express.static(path.join(__dirname, '/public')));
+app.use('/', express.static(path.join(__dirname, 'public')));
 
 app.use('/', require('./routes/root'));
 app.use('/auth', require('./routes/authRoutes'));

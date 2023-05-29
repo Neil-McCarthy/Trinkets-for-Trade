@@ -12,22 +12,6 @@ const Trinket = ({trinketId}) => {
         const handleEdit = () => navigate(`/trinkets/${trinketId}`)
 
         return (
-            // <tr>
-            //     <td>
-            //         {trinket.name}
-            //     </td>
-            //     <td>
-            //         {trinket.description}
-            //     </td>
-            //     <td>
-            //         {trinket.price}
-            //     </td>
-            //     <td>
-            //         <button onClick={handleEdit}>
-            //             Edit
-            //         </button>
-            //     </td>
-            // </tr>
             <section>
                 <h1>
                     {trinket.name}
@@ -36,6 +20,7 @@ const Trinket = ({trinketId}) => {
                 <p>
                     €{trinket.price}
                 </p>
+                <br/>
                 <p>
                     {trinket.description}
                 </p>

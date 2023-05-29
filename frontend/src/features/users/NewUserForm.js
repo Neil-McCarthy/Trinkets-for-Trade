@@ -3,6 +3,7 @@ import { useAddNewUserMutation } from "./usersApiSlice"
 import { useNavigate } from "react-router-dom"
 import Header from "../../components/common/Header"
 import Nav from "../../components/common/Nav"
+import Footer from "../../components/common/Footer"
 
 const USER_REGEX = /^[A-z]{3,20}$/
 const PWD_REGEX = /^[A-z0-9!@#$%]{4,12}$/
@@ -57,35 +58,34 @@ const NewUserForm = () => {
         <>
             <p className={errClass}>{error?.data?.message}</p>
 
-            <form onSubmit={onSaveUserClicked}>
+            <form className="create-new-form" onSubmit={onSaveUserClicked}>
+                <h2>New User</h2>
                 <div>
-                    <h2>New User</h2>
-                    <div>
-                        <button title="Save" disabled={!canSave}>
-                            Button
-                        </button>
-                    </div>
+                    <label htmlFor="username">
+                        Username: <span>[3-20 letters]</span></label>
+                    <input
+                        id="username"
+                        name="username"
+                        type="text"
+                        autoComplete="off"
+                        value={username}
+                        onChange={onUsernameChanged}
+                    />
                 </div>
-                <label htmlFor="username">
-                    Username: <span>[3-20 letters]</span></label>
-                <input
-                    id="username"
-                    name="username"
-                    type="text"
-                    autoComplete="off"
-                    value={username}
-                    onChange={onUsernameChanged}
-                />
-
-                <label htmlFor="password">
-                    Password: <span>[4-12 chars incl. !@#$%]</span></label>
-                <input
-                    id="password"
-                    name="password"
-                    type="password"
-                    value={password}
-                    onChange={onPasswordChanged}
-                />
+                <div>
+                    <label htmlFor="password">
+                        Password: <span>[4-12 chars incl. !@#$%]</span></label>
+                    <input
+                        id="password"
+                        name="password"
+                        type="password"
+                        value={password}
+                        onChange={onPasswordChanged}
+                    />
+                </div>
+                <button title="Save" disabled={!canSave}>
+                    Create New User
+                </button>
             </form>
         </>
     )
@@ -94,7 +94,10 @@ const NewUserForm = () => {
         <>
             <Header />
             <Nav isLoggedIn={false} />
-            {content}
+            <main className="create-new-main">
+                {content}
+            </main>
+            <Footer />
         </>
     )
 }

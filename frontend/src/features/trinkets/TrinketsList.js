@@ -28,13 +28,13 @@ const TrinketsList = () => {
 
         const { ids } = trinkets
 
-        const tableContent = ids?.length
+        const trinketListContent = ids?.length
             ? ids.map(trinketId => <Trinket key={trinketId} trinketId={trinketId} />)
             : null
 
         content = (
             <section className="display-all-section">
-                {tableContent}
+                {trinketListContent}
             </section>
         )
     }

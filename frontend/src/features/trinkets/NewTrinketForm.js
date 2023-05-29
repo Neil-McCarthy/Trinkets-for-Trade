@@ -2,6 +2,9 @@ import { useState, useEffect } from "react"
 import { useNavigate } from "react-router-dom"
 import { useAddNewTrinketMutation } from "./trinketsApiSlice"
 import useAuth from "../../hooks/useAuth"
+import Header from "../../components/common/Header"
+import Nav from "../../components/common/Nav"
+import Footer from "../../components/common/Footer"
 
 const NewTrinketForm = () => {
 
@@ -44,51 +47,57 @@ const NewTrinketForm = () => {
 
     const content = (
         <>
-            <p>{error?.data?.message}</p>
+            <Header />
+            <Nav  isLoggedIn={true} />
+            <main>
+                <p>{error?.data?.message}</p>
 
-            <form onSubmit={onSaveTrinketClicked}>
-                <div>
+                <form className="create-new-form" onSubmit={onSaveTrinketClicked}>
                     <h2>New Trinket</h2>
                     <div>
-                        <button
-                            className="icon-button"
-                            title="Save"
-                            disabled={!canSave}
-                        >
-                            Save
-                        </button>
+                        <label htmlFor="name">
+                            Name:</label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="text"
+                            autoComplete="off"
+                            value={name}
+                            onChange={onNameChanged}
+                        />
                     </div>
-                </div>
-                <label htmlFor="name">
-                    Name:</label>
-                <input
-                    id="name"
-                    name="name"
-                    type="text"
-                    autoComplete="off"
-                    value={name}
-                    onChange={onNameChanged}
-                />
-
-                <label htmlFor="description">
-                    Description:</label>
-                <textarea
-                    id="description"
-                    name="description"
-                    value={description}
-                    onChange={onDescriptionChanged}
-                />
-                <label htmlFor="price">
-                    Price:</label>
-                <input
-                    id="name"
-                    name="name"
-                    type="number"
-                    autoComplete="off"
-                    value={price}
-                    onChange={onPriceChanged}
-                />
-            </form>
+                    <div>
+                        <label htmlFor="description">
+                            Description:</label>
+                        <textarea
+                            id="description"
+                            name="description"
+                            value={description}
+                            onChange={onDescriptionChanged}
+                        />
+                    </div>
+                    <div>
+                        <label htmlFor="price">
+                            Price:</label>
+                        <input
+                            id="name"
+                            name="name"
+                            type="number"
+                            autoComplete="off"
+                            value={price}
+                            onChange={onPriceChanged}
+                        />
+                    </div>
+                    <button
+                        className="icon-button"
+                        title="Save"
+                        disabled={!canSave}
+                    >
+                        Save
+                    </button>
+                </form>
+            </main>
+            <Footer />
         </>
     )
 

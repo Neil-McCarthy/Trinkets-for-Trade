@@ -11,14 +11,12 @@ const User = ({userId}) => {
         const handleEdit = () => navigate(`/users/${userId}`)
 
         return (
-            <tr>
-                <td>{user.username}</td>
-                <td>
+            <section>
+                <h1>{user.username}</h1>
                     <button onClick={handleEdit}>
                         Edit user
                     </button>
-                </td>
-            </tr>
+            </section>
         )
 
     } else return null

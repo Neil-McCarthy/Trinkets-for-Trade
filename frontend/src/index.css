@@ -101,6 +101,7 @@ main {
   background-color: aquamarine;
   padding: .3em;
   border: .4em solid white;
+  min-height: 20em;
 }
 .display-all-section h1 {
   text-align: center;
@@ -110,6 +111,39 @@ main {
   max-width: 60%;
 }
 /* <<<DISPLAY SECTION */
+
+/* CREATE NEW>>> */
+.create-new-main {
+  margin: 0 25%;
+}
+.create-new-form {
+  font-size: large;
+  padding: 1em;
+  margin-top: 2em;
+  background-color: aquamarine;
+  border-radius: 1em;
+}
+.create-new-form div {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  padding: 2em;
+}
+.create-new-form input {
+  padding: .5em;
+}
+.create-new-form button {
+  background-color: whitesmoke;
+	padding: 1em;
+  margin-left: 40%;
+  border-radius: 1em;
+	font: inherit;
+	cursor: pointer;
+} 
+.create-new-form div button {
+  margin: 0 20%;
+}
+/* <<<CREATE NEW */
 
 /* <<<MAIN */
 

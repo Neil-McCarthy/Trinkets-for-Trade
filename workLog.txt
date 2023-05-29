@@ -6,16 +6,10 @@ BACKEND>>>
 
 FRONTEND>>>
 
--create footer component
+-edit Routes
 
--add footer in public and trinket list components
+-add styles for create new pages
 
--add icon images for footer
-
--add template image for trinket list (will remove later)
-
--correct trinket list img src
-
--add styles for display all sections and for footer
+-update layout for Login.js / NewTrinketForm.js / NewUserForm.js
 
 <<<FRONTEND

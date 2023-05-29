@@ -18,19 +18,21 @@ function App() {
       <Route path='/' element={<Layout />}>
         <Route index element={<Public />} />
         <Route path='login' element={<Login />} />
-        <Route path='newUser' element={<NewUserForm />} />
         <Route element={<PersistLogin />}>
-          <Route element={<Prefetch />}>
             <Route path='users'>
-              <Route index element={<UsersList />} />
-              <Route path=':id' element={<EditUser />} />
+              <Route element={<Prefetch />}>
+                <Route index element={<UsersList />} />
+                <Route path=':id' element={<EditUser />} />
+              </Route>
+              <Route path='newUser' element={<NewUserForm />} />
             </Route>
             <Route path='trinkets'>
+              <Route element={<Prefetch />}>
+                <Route path=':id' element={<EditTrinket />} />
+                <Route path='newTrinket' element={<NewTrinketForm />} />
+              </Route>
               <Route index element={<TrinketsList />} />
-              <Route path=':id' element={<EditTrinket />} />
-              <Route path='newTrinket' element={<NewTrinketForm />} />
             </Route>
-          </Route>
         </Route>
       </Route>
     </Routes>

@@ -2,6 +2,7 @@ import { useGetUsersQuery } from "./usersApiSlice";
 import User from './User';
 import Header from "../../components/common/Header";
 import Nav from "../../components/common/Nav";
+import Footer from "../../components/common/Footer";
 
 const UsersList = () => {
 
@@ -29,22 +30,14 @@ const UsersList = () => {
 
         const { ids } = users
 
-        const tableContent = ids?.length
+        const usersListContent = ids?.length
             ? ids.map(userId => <User key={userId} userId={userId} />)
             : null
 
         content = (
-            <table>
-                <thead>
-                    <tr>
-                        <th>Username</th>
-                        <th>Edit</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {tableContent}
-                </tbody>
-            </table>
+            <section className="display-all-section">
+                {usersListContent}
+            </section>
         )
     }
 
@@ -52,7 +45,10 @@ const UsersList = () => {
         <>
             <Header />
             <Nav  isLoggedIn={true} />
-            {content}
+            <main>
+                {content}
+            </main>
+            <Footer />
         </>
     )
 }

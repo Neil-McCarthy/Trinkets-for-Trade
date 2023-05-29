@@ -7,6 +7,7 @@ import { useLoginMutation } from './authApiSlice'
 
 import usePersist from '../../hooks/usePersist'
 import Nav from '../../components/common/Nav'
+import Header from '../../components/common/Header'
 
 
 const Login = () => {
@@ -61,52 +62,56 @@ const Login = () => {
     if (isLoading) return <p>Loading...</p>
 
     const content = (
-        <section className="public">
-            <header>
-                <h1>Employee Login</h1>
-            </header>
+        <> 
+            <Header />
             <Nav  isLoggedIn={false} />
             <main>
                 <p ref={errRef} aria-live="assertive">{errMsg}</p>
 
-                <form onSubmit={handleSubmit}>
-                    <label htmlFor="username">Username:</label>
-                    <input
-                        type="text"
-                        id="username"
-                        ref={userRef}
-                        value={username}
-                        onChange={handleUserInput}
-                        autoComplete="off"
-                        required
-                    />
-
-                    <label htmlFor="password">Password:</label>
-                    <input
-                        type="password"
-                        id="password"
-                        onChange={handlePwdInput}
-                        value={password}
-                        required
-                    />
-                    <button>Sign In</button>
-
-                    <label htmlFor="persist">
+                <form className='create-new-form' onSubmit={handleSubmit}>
+                    <h1>
+                        Login
+                    </h1>
+                    <div>
+                        <label htmlFor="username">Username:</label>
                         <input
-                            type="checkbox"
-                            id="persist"
-                            onChange={handleToggle}
-                            checked={persist}
+                            type="text"
+                            id="username"
+                            ref={userRef}
+                            value={username}
+                            onChange={handleUserInput}
+                            autoComplete="off"
+                            required
                         />
-                        Trust This Device
-                    </label>
-
+                    </div>
+                    <div>
+                        <label htmlFor="password">Password:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            onChange={handlePwdInput}
+                            value={password}
+                            required
+                        />
+                    </div>
+                    <div>
+                        <button>Sign In</button>
+                        <label htmlFor="persist">
+                            <input
+                                type="checkbox"
+                                id="persist"
+                                onChange={handleToggle}
+                                checked={persist}
+                            />
+                            Trust This Device
+                        </label>
+                    </div>
                 </form>
             </main>
             <footer>
                 <Link to="/">Back to Home</Link>
             </footer>
-        </section>
+        </>
     )
 
     return content

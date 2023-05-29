@@ -1,18 +1,11 @@
 BACKEND>>>
 
--set allowed origins to static site on render
-
--remove no origin condition from corsOptions
+-
 
 <<<BACKEND
 
 FRONTEND>>>
 
--run command
-    npm i @fvilers/disable-react-devtools
-
--add condition to index.js to disable dev tools when in production
-
--set redux devTools to false in src/app/store.js
+-update apislice.js baseurl
 
 <<<FRONTEND

@@ -80,7 +80,9 @@ main {
 }
 .home .auth {
   display: grid;
+  background-color: white;
   grid-template-columns: repeat(2, 1fr);
+  column-gap: .5em;
   text-align: center;
 }
 .home .auth section {

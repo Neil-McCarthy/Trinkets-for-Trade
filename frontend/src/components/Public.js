@@ -37,7 +37,7 @@ const Public = () => {
                             New here? Sign-up!
                         </h1>
                         <p>
-                            Signing up will only take a minute! It's completely free and we require no credit/debit card details.
+                            Signing up will only take a minute and is completely free!
                         </p>
                         <a href="newUser">Sign-up</a>
                     </section>

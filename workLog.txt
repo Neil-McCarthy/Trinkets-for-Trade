@@ -6,10 +6,10 @@ BACKEND>>>
 
 FRONTEND>>>
 
--reshape trinket list layout
+-add content to public js
 
--add trinket list className
+-add styles to puclic js
 
--rearrange nav links
+-update app routes
 
 <<<FRONTEND

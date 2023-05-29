@@ -18,12 +18,12 @@ function App() {
       <Route path='/' element={<Layout />}>
         <Route index element={<Public />} />
         <Route path='login' element={<Login />} />
+        <Route path='newUser' element={<NewUserForm />} />
         <Route element={<PersistLogin />}>
           <Route element={<Prefetch />}>
             <Route path='users'>
               <Route index element={<UsersList />} />
               <Route path=':id' element={<EditUser />} />
-              <Route path='newUser' element={<NewUserForm />} />
             </Route>
             <Route path='trinkets'>
               <Route index element={<TrinketsList />} />

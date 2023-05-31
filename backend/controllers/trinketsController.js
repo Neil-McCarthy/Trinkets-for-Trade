@@ -16,14 +16,14 @@ const getAllTrinkets = asyncHandler(async (req, res) => {
     // See Promise.all with map() here: https://youtu.be/4lqJBBEpjRE 
     // You could also do this with a for...of loop
 
-    // const trinketWithUser = await Promise.all(trinkets.map(async (trinket) => {
-    //     const user = await User.findById(trinket.user).lean().exec()
-    //     console.log(trinket.user)
-    //     console.log(user)
-    //     return { ...trinket, username: user.username }
-    // }))
+    const trinketWithUser = await Promise.all(trinkets.map(async (trinket) => {
+        const user = await User.findById(trinket.user).lean().exec()
+        console.log(trinket.user)
+        console.log(user)
+        return { ...trinket, username: user.username }
+    }))
 
-    res.json(trinkets)
+    res.json(trinketWithUser)
 })
 
 

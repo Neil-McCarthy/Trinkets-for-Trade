@@ -1,14 +1,19 @@
 import { useNavigate } from 'react-router-dom'
-
-import { useSelector } from 'react-redux'
-import { selectUserById } from './usersApiSlice'
+import { useGetUsersQuery } from './usersApiSlice'
+import { memo } from 'react'
 
 const User = ({userId}) => {
-    const user = useSelector(state => selectUserById(state, userId))
+    
+    const { user } = useGetUsersQuery("usersList", {
+        selectFromResult: ({ data }) => ({
+            user: data?.entities[userId]
+        }),
+    })
+
     const navigate = useNavigate()
 
     if (user) {
-        const handleEdit = () => navigate(`/users/${userId}`)
+        const handleEdit = () => navigate(`/users/edit/${userId}`)
 
         return (
             <section>
@@ -21,5 +26,5 @@ const User = ({userId}) => {
 
     } else return null
 }
-
-export default User;
+const memoizedUser = memo(User)
+export default memoizedUser;

@@ -11,6 +11,7 @@ import PersistLogin from './features/auth/PersistLogin';
 import TrinketsList from './features/trinkets/TrinketsList';
 import EditTrinket from './features/trinkets/EditTrinket';
 import NewTrinketForm from './features/trinkets/NewTrinketForm';
+import SingleTrinket from './features/trinkets/SingleTrinket';
 
 function App() {
   return (
@@ -19,16 +20,17 @@ function App() {
         <Route index element={<Public />} />
         <Route path='login' element={<Login />} />
         <Route element={<PersistLogin />}>
-            <Route path='users'>
               <Route element={<Prefetch />}>
+                <Route path='users'>
                 <Route index element={<UsersList />} />
-                <Route path=':id' element={<EditUser />} />
+                <Route path='edit/:id' element={<EditUser />} />
               </Route>
               <Route path='newUser' element={<NewUserForm />} />
             </Route>
             <Route path='trinkets'>
+            <Route path=':id' element={<SingleTrinket />} />
               <Route element={<Prefetch />}>
-                <Route path=':id' element={<EditTrinket />} />
+                <Route path='edit/:id' element={<EditTrinket />} />
                 <Route path='newTrinket' element={<NewTrinketForm />} />
               </Route>
               <Route index element={<TrinketsList />} />

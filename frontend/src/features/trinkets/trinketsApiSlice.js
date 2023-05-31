@@ -5,15 +5,18 @@ const trinketsAdapter = createEntityAdapter({
     sortComparer: (a, b) => (a.completed === b.completed) ? 0 : a.completed ? 1 : -1
 })
 
+
 const initialState = trinketsAdapter.getInitialState()
 
 export const trinketsApiSlice = apiSlice.injectEndpoints({
     endpoints: builder => ({
         getTrinkets: builder.query({
-            query: () => '/trinkets',
-            validateStatus: (response, result) => {
-                return response.status === 200 && !result.isError
-            },
+            query: () => ({
+                url: '/trinkets',
+                validateStatus: (response, result) => {
+                    return response.status === 200 && !result.isError
+                },
+            }),
             transformResponse: responseData => {
                 const loadedTrinkets = responseData.map(trinket => {
                     trinket.id = trinket._id
@@ -39,7 +42,7 @@ export const trinketsApiSlice = apiSlice.injectEndpoints({
                 }
             }),
             invalidatesTags: [
-                { type: 'trinket', id: "LIST" }
+                { type: 'Trinket', id: "LIST" }
             ]
         }),
         updateTrinket: builder.mutation({

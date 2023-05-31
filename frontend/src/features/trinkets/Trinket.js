@@ -1,10 +1,15 @@
-// import { useNavigate } from "react-router-dom";
-import { useSelector } from "react-redux";
-import { selectTrinketById } from "./trinketsApiSlice";
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from "react-router-dom";
+import { useGetTrinketsQuery } from "./trinketsApiSlice";
+import { memo } from "react";
 
 const Trinket = ({trinketId}) => {
-    const trinket = useSelector(state => selectTrinketById(state, trinketId))
+    
+    const { trinket } = useGetTrinketsQuery("trinketsList", {
+        selectFromResult: ({ data }) => ({
+            trinket: data?.entities[trinketId]
+        }),
+    })
+
     const navigate = useNavigate()
     
     if (trinket) {
@@ -24,10 +29,13 @@ const Trinket = ({trinketId}) => {
                 <p>
                     {trinket.description}
                 </p>
+                <button onClick={handleEdit}>
+                    View
+                </button>
             </section>
         )
 
     } else return null
 }
-
-export default Trinket
+const memoizedTrinket = memo(Trinket)
+export default memoizedTrinket

@@ -1,11 +1,13 @@
 BACKEND>>>
 
--
+-set allowed origins to local
+
+-set PORT to local address in server.js
 
 <<<BACKEND
 
 FRONTEND>>>
 
--update apislice.js baseurl
+-set basurl to local in src/app/apiSlice
 
 <<<FRONTEND

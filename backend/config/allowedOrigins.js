@@ -1,6 +1,6 @@
 const allowedOrigins = [
-    // 'https://trinkets-for-trade.onrender.com'
-    'http://localhost:3000'
+    'https://trinkets-for-trade.onrender.com',
+    // 'http://localhost:3000'
 ]
 
 module.exports = allowedOrigins;

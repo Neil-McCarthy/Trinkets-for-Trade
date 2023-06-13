@@ -4,6 +4,9 @@
   padding: 0;
   margin: 0;
 }
+body {
+  background-color: #2b4353;
+}
 #id {
   display:grid;
   grid-template-columns: repeat(4, 1fr);
@@ -22,14 +25,15 @@ a {
 header {
   text-align: center;
   height: 10em;
-  padding-top: 4em;
-  background-color: aquamarine;
+  background-color: #2b4353;
+}
+header div {
+  height: 100%;
+  background-color: azure;
+  margin: 0 15%;
 }
 header h1 {
-  padding: 1em;
-  background-color: whitesmoke;
-  margin: 0 35%;
-  border-radius: 1em;
+  padding-top: 5%;
 }
 
 /* <<<HEADER */
@@ -38,7 +42,7 @@ header h1 {
 
 nav {
   height: 4em;
-  background-color: cornsilk;
+  background-color: #ff6745;
 }
 nav ul {
   display: flex;
@@ -58,7 +62,9 @@ nav a:hover, nav button:hover {
   transition: .5s;
   background-color: azure;
 }
-
+.active {
+  background-color: azure;
+}
 /* <<<NAV */
 
 
@@ -67,26 +73,43 @@ nav a:hover, nav button:hover {
 main {
   margin: auto;
   margin: 0 15%;
+  font-size: 110%;
 }
 /* HOME PAGE>>> */
 .home section {
   margin-top: 8em;
   font-size: 110%;
   border-radius: 1em;
-  background-color: aquamarine;
+  background-color: azure;
+  box-shadow:0em 0em .8em;
+  color: ghostwhite;
 }
 .home section h1, .home section p {
   padding:1em;
+  color: #2b4353;
+}
+.home section h1 {
+  border-radius: .5em .5em .5em 0;
+  margin-right: 60%;
+  text-align: center;
+  background-color: #ff6745;
 }
 .home .auth {
   display: grid;
-  background-color: white;
+  background-color: #2b4353;
+  box-shadow:0em 0em 0em;
   grid-template-columns: repeat(2, 1fr);
-  column-gap: .5em;
+  column-gap: 2em;
   text-align: center;
 }
 .home .auth section {
   margin: 0;
+}
+.home .auth section h1 {
+  margin-right: 40%;
+}
+.auth a {
+  color: black;
 }
 /* <<<HOME PAGE */
 
@@ -100,10 +123,20 @@ main {
 
 }
 .display-all-section section {
-  background-color: aquamarine;
+  background-color: azure;
+  color: ghostwhite;
   padding: .3em;
-  border: .4em solid white;
   min-height: 20em;
+  margin: .5em;
+  border-radius: 1em;
+  cursor: pointer;
+  transition: .3s;
+}
+.display-all-section section:hover {
+  box-shadow:0em 0em 1em;
+}
+.display-all-section section h1, .display-all-section section p {
+  color: #2b4353;
 }
 .display-all-section h1 {
   text-align: center;
@@ -122,7 +155,7 @@ main {
   font-size: large;
   padding: 1em;
   margin-top: 2em;
-  background-color: aquamarine;
+  background-color: azure;
   border-radius: 1em;
 }
 .create-new-form div {
@@ -133,6 +166,9 @@ main {
 }
 .create-new-form input {
   padding: .5em;
+}
+.create-new-form textarea {
+  height: 10em;
 }
 .create-new-form button {
   background-color: whitesmoke;
@@ -146,6 +182,24 @@ main {
   margin: 0 20%;
 }
 /* <<<CREATE NEW */
+
+/* TRINKET LIST>>> */
+.new-trinket {
+  background-color: azure;
+  color: ghostwhite;
+  padding: 1em;
+  margin: 2em 6em;
+  text-align: center;
+  transition: .3s;
+}
+.new-trinket:hover {
+  box-shadow: 0 0 .7em;
+}
+.new-trinket h1 {
+  color: #2b4353;
+  font-size: 100%;
+}
+/* <<<TRINKET LIST */
 
 /* <<<MAIN */
 

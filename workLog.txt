@@ -1,13 +1,13 @@
 BACKEND>>>
 
--set allowed origins to local
-
--set PORT to local address in server.js
+-
 
 <<<BACKEND
 
 FRONTEND>>>
 
--set basurl to local in src/app/apiSlice
+-correct new user nav link
+
+-update layout for auth buttons on home page
 
 <<<FRONTEND

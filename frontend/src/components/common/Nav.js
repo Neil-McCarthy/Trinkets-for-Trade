@@ -8,6 +8,9 @@ const Nav = (props) => {
     // let isLoggedIn = document.cookie;
     // console.log(isLoggedIn);
 
+    let currentURL = window.location.href
+    let trimmedURL = currentURL.replace('http://localhost:3000/', '')
+
     const navigate = useNavigate()
 
     const [sendLogout, {
@@ -33,14 +36,14 @@ const Nav = (props) => {
     return (
         <nav>
             <ul>
-                <Link to='/'>Home</Link>
-                <Link to='/trinkets/'>Trinkets</Link>
-                <Link to='/users/'>Users</Link>
+                <Link className={trimmedURL === '' ? 'active' : ''} to='/'>Home</Link>
+                <Link className={trimmedURL === 'trinkets' ? 'active' : ''} to='/trinkets'>Trinkets</Link>
+                <Link className={trimmedURL === 'users' ? 'active' : ''} to='/users'>Users</Link>
                 {!isLoggedIn && (
-                    <Link to='/users/newUser'>Sign Up</Link>
+                    <Link className={trimmedURL === 'newUser' ? 'active' : ''} to='/newUser'>Sign Up</Link>
                 )}
                 {!isLoggedIn && (
-                    <Link to='/login'>Login</Link>
+                    <Link className={trimmedURL === 'login' ? 'active' : ''} to='/login'>Login</Link>
                 )}
                 {isLoggedIn && (
                     <Link onClick={sendLogout} to='/'>Logout</Link>

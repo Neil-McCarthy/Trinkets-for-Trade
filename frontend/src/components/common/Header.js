@@ -1,9 +1,11 @@
 const Header = () => {
     return (
         <header>
-            <h1>
-                Welcome to Trinkets for Trade!
-            </h1>
+            <div>
+                <h1>
+                    Welcome to Trinkets for Trade!
+                </h1>
+            </div>
         </header>
     )
 }

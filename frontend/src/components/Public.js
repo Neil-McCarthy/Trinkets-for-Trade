@@ -32,24 +32,26 @@ const Public = () => {
                     </p>
                 </section>
                 <section className='auth'>
-                    <section>
-                        <h1>
-                            New here? Sign-up!
-                        </h1>
-                        <p>
-                            Signing up will only take a minute and is completely free!
-                        </p>
-                        <a href="newUser">Sign-up</a>
-                    </section>
-                    <section>
-                        <h1>
-                            Have an account? Login!
-                        </h1>
-                        <p>
-                            Welcome back! Click the button below to login to your account
-                        </p>
-                        <a href="login">Login</a>
-                    </section>
+                    <a href='newUser'>
+                        <section>
+                            <h1>
+                                New here? Sign-up!
+                            </h1>
+                            <p>
+                                Signing up will only take a minute and is completely free!
+                            </p>
+                        </section>
+                    </a>
+                    <a href='login'>
+                        <section>
+                            <h1>
+                                Have an account? Login!
+                            </h1>
+                            <p>
+                                Welcome back! Click the button below to login to your account
+                            </p>
+                        </section>
+                    </a>
                 </section>
             </main>
             <Footer />

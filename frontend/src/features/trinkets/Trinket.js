@@ -17,11 +17,11 @@ const Trinket = ({trinketId}) => {
         const handleEdit = () => navigate(`/trinkets/${trinketId}`)
 
         return (
-            <section>
+            <section onClick={handleEdit}>
                 <h1>
                     {trinket.name}
                 </h1>
-                <img src={require('../../images/duck.jpg')} />
+                <img src={require('../../images/duck.jpg')} alt="a duck" />
                 <p>
                     €{trinket.price}
                 </p>
@@ -29,9 +29,6 @@ const Trinket = ({trinketId}) => {
                 <p>
                     {trinket.description}
                 </p>
-                <button onClick={handleEdit}>
-                    View
-                </button>
             </section>
         )
 

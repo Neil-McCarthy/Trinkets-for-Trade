@@ -28,8 +28,8 @@ function App() {
               <Route path='newUser' element={<NewUserForm />} />
             </Route>
             <Route path='trinkets'>
-            <Route path=':id' element={<SingleTrinket />} />
               <Route element={<Prefetch />}>
+                <Route path=':id' element={<SingleTrinket />} />
                 <Route path='edit/:id' element={<EditTrinket />} />
                 <Route path='newTrinket' element={<NewTrinketForm />} />
               </Route>

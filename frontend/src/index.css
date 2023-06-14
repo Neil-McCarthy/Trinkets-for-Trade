@@ -131,6 +131,9 @@ main {
   border-radius: 1em;
   cursor: pointer;
   transition: .3s;
+  height: 15em;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .display-all-section section:hover {
   box-shadow:0em 0em 1em;
@@ -197,7 +200,7 @@ main {
 }
 .new-trinket h1 {
   color: #2b4353;
-  font-size: 100%;
+  font-size: 200%;
 }
 /* <<<TRINKET LIST */
 

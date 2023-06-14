@@ -48,15 +48,13 @@ const TrinketsList = () => {
             <Header />
             <Nav  isLoggedIn={true} />
             <main>
-                <h1>
-                    <Link to='/trinkets/newTrinket'>
-                        <div className="new-trinket">
-                            <h1>
-                                Create new trinket +
-                            </h1>
-                        </div>
+                <div className="new-trinket">
+                    <Link to='/trinkets/newTrinket'>   
+                        <h1>
+                            Create new trinket +
+                        </h1>
                     </Link>
-                </h1>
+                </div>
                 {content}
             </main>
             <Footer />

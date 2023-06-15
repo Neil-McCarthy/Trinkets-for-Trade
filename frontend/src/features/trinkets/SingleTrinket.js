@@ -1,8 +1,9 @@
 import { useParams } from "react-router-dom"
-import { useSelector } from 'react-redux'
-import { selectUserById } from '../users/usersApiSlice'
-import { selectTrinketById, useGetTrinketsQuery } from './trinketsApiSlice'
+import { useGetTrinketsQuery } from './trinketsApiSlice'
 import Trinket from "./Trinket"
+import Header from "../../components/common/Header"
+import Nav from "../../components/common/Nav"
+import Footer from "../../components/common/Footer"
 
 const SingleTrinket = () => {
     const { id } = useParams()
@@ -19,7 +20,16 @@ const SingleTrinket = () => {
 
     const content = trinket ? <Trinket key={id} trinketId={id} /> : <p>Loading...</p>
 
-    return content
+    return (
+        <>
+            <Header />
+            <Nav  isLoggedIn={true} />
+            <main className="single-display">
+                {content}
+            </main>
+            <Footer />
+        </>
+    )
 }
 
 export default SingleTrinket

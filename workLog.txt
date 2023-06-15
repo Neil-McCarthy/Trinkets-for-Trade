@@ -1,13 +1,21 @@
 BACKEND>>>
 
--
+-set up dev/production conditions for allowedOrigins + server (not finished)
 
 <<<BACKEND
 
 FRONTEND>>>
 
--correct new user nav link
+-set up dev/production conditions for apiSlice baseUrl (not finished)
 
--update layout for auth buttons on home page
+-styles for home page auth sections
+
+-styles for single display
+
+-added content to singleTrinket 
+
+-updated logic for userList and user
+
+-can only go through userList to edit own profile
 
 <<<FRONTEND

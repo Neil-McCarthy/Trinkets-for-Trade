@@ -31,7 +31,7 @@ const UsersList = () => {
         const { ids } = users
 
         const usersListContent = ids?.length
-            ? ids.map(userId => <User key={userId} userId={userId} />)
+            ? ids.map(userId => <User key={userId} activeUserId={userId} />)
             : null
 
         content = (

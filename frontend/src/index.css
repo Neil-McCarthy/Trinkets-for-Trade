@@ -81,7 +81,6 @@ main {
   font-size: 110%;
   border-radius: 1em;
   background-color: azure;
-  box-shadow:0em 0em .8em;
   color: ghostwhite;
 }
 .home section h1, .home section p {
@@ -102,8 +101,12 @@ main {
   column-gap: 2em;
   text-align: center;
 }
+.home .auth section:hover {
+  box-shadow: 0 0 1em;
+}
 .home .auth section {
   margin: 0;
+  transition: .3s;
 }
 .home .auth section h1 {
   margin-right: 40%;
@@ -203,6 +206,20 @@ main {
   font-size: 200%;
 }
 /* <<<TRINKET LIST */
+
+/* SINGLE DISPLAY>>> */
+.single-display {
+  margin-top: 5em;
+  text-align: center;
+  background-color: azure;
+}
+.single-display h1, .single-display p {
+  padding: 1em;
+}
+.single-display .price {
+  text-align: left;
+}
+/* <<<SINGLE DISPLAY */
 
 /* <<<MAIN */
 

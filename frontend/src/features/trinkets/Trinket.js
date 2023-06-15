@@ -22,7 +22,7 @@ const Trinket = ({trinketId}) => {
                     {trinket.name}
                 </h1>
                 <img src={require('../../images/duck.jpg')} alt="a duck" />
-                <p>
+                <p className="price">
                     €{trinket.price}
                 </p>
                 <br/>

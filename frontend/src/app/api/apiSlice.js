@@ -1,9 +1,14 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { setCredentials } from '../../features/auth/authSlice';
 
+const baseUrlStore = 'https://trinketsfortrade-api.onrender.com'
+// if (process.env.NODE_ENV === 'development') {
+// const baseUrlStore = 'http://localhost:3500'
+// }
+
+
 const baseQuery = fetchBaseQuery({
-    baseUrl: 'https://trinketsfortrade-api.onrender.com',
-    // baseUrl: 'http://localhost:3500',
+    baseUrl: baseUrlStore,
     credentials: 'include',
     prepareHeaders: (headers, { getState }) => {
         const token = getState().auth.token

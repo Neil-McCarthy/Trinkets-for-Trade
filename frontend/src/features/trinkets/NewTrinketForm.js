@@ -13,7 +13,7 @@ const NewTrinketForm = () => {
     const [addNewTrinket, {
         isLoading,
         isSuccess,
-        isError,
+        // isError,
         error
     }] = useAddNewTrinketMutation()
 

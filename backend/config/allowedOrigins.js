@@ -1,6 +1,11 @@
+const acceptedOrigin = 'https://trinkets-for-trade.onrender.com'
+
+// if (process.env.NODE_ENV === 'development') {
+// const acceptedOrigin = 'http://localhost:3000'
+// }
+
 const allowedOrigins = [
-    'https://trinkets-for-trade.onrender.com',
-    // 'http://localhost:3000'
+    acceptedOrigin
 ]
 
 module.exports = allowedOrigins;

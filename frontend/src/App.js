@@ -12,6 +12,7 @@ import TrinketsList from './features/trinkets/TrinketsList';
 import EditTrinket from './features/trinkets/EditTrinket';
 import NewTrinketForm from './features/trinkets/NewTrinketForm';
 import SingleTrinket from './features/trinkets/SingleTrinket';
+import SingleUser from './features/users/SingleUser';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
               <Route element={<Prefetch />}>
                 <Route path='users'>
                 <Route index element={<UsersList />} />
+                <Route path=':id' element={<SingleUser />} />
                 <Route path='edit/:id' element={<EditUser />} />
               </Route>
               <Route path='newUser' element={<NewUserForm />} />

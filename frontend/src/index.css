@@ -210,6 +210,7 @@ main {
 /* SINGLE DISPLAY>>> */
 .single-display {
   margin-top: 5em;
+  display: flex;
   text-align: center;
   background-color: azure;
 }

@@ -1,18 +1,17 @@
 import { useParams } from "react-router-dom"
-import { useGetTrinketsQuery } from './trinketsApiSlice'
-import { useGetUsersQuery } from '../users/usersApiSlice'
-import Trinket from "./Trinket"
+import { useGetTrinketsQuery } from '../trinkets/trinketsApiSlice'
+import { selectUserById, useGetUsersQuery } from './usersApiSlice'
+import Trinket from "../trinkets/Trinket"
 import Header from "../../components/common/Header"
 import Nav from "../../components/common/Nav"
 import Footer from "../../components/common/Footer"
 
-const SingleTrinket = () => {
+const SingleUser = () => {
     const { id } = useParams()
 
-    // const { trinket } = useSelector(state => selectTrinketById(state, id))
-    const { trinket } = useGetTrinketsQuery("trinketList", {
+    const { user } = useGetUsersQuery("userList", {
         selectFromResult: ({ data }) => ({
-            trinket: data?.entities[id]
+            user: data?.entities[id]
         })
     })
     // const { user } = useGetUsersQuery("userList", {
@@ -22,20 +21,17 @@ const SingleTrinket = () => {
     // })
     
 
-    console.log(id)
 
-    const content = trinket ? <Trinket key={id} trinketId={id} /> : <p>Loading...</p>
+    // const content = trinket ? <Trinket key={id} trinketId={id} /> : <p>Loading...</p>
 
     return (
         <>
             <Header />
             <Nav  isLoggedIn={true} />
-            <main className="single-display">
-                {content}
-            </main>
+            <h1>{user.username}</h1>
             <Footer />
         </>
     )
 }
 
-export default SingleTrinket
+export default SingleUser

@@ -15,10 +15,10 @@ const User = ({activeUserId}) => {
     })
 
     const navigate = useNavigate()
+    const handleEdit = () => navigate(`/users/edit/${activeUserId}`)
+    const handleSingleUser = () => navigate(`/users/${user.id}`)
 
     if (user) {
-        const handleEdit = () => navigate(`/users/edit/${activeUserId}`)
-        
         let editFlag = false
         console.log(userId, activeUserId)
         if (userId === activeUserId) {
@@ -26,7 +26,7 @@ const User = ({activeUserId}) => {
         }
 
         return (
-            <section>
+            <section onClick={handleSingleUser}>
                 <h1>{user.username}</h1>
                     {editFlag && <button onClick={handleEdit}>Edit user</button>}
             </section>

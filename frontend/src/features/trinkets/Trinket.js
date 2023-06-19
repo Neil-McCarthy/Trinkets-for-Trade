@@ -11,13 +11,12 @@ const Trinket = ({trinketId}) => {
     })
 
     const navigate = useNavigate()
+    const handleSingleTrinket = () => navigate(`/trinkets/${trinketId}`)
     
     if (trinket) {
 
-        const handleEdit = () => navigate(`/trinkets/${trinketId}`)
-
         return (
-            <section onClick={handleEdit}>
+            <section onClick={handleSingleTrinket}>
                 <h1>
                     {trinket.name}
                 </h1>
